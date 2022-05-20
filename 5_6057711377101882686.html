@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="">
+    <h1>Apply for New Voter Id Registration</h1>   
+<div>
+    <marquee>
+        <p>Fill The details correctly as per in the Audhar Card.</p>
+    </marquee>
+<form name="myform">
+    <label>First Name:</label>
+    <input type="text" name="name1" ng-model="name.first" ng-required="true"/><br><br>
+    <label>Last name:</label>
+    <input type="text" name="name2" ng-model="name.last"><br><br>
+    <label>Date of Birth:</label>
+    <input type="date" name="Udate"><br><br>
+    <label>Phone number:</label>
+    <input type="tel" name="ph"><br><br>
+    <label>Email:</label>
+    <input type="email" name="email"><br><br>
+    <label>Audhar No.</label>
+    <input type="text" name="audhar"><br><br>
+    <label>Gender:</label>
+    <input type="radio" id="M" name="gender">
+    <label for="M">Male</label>
+    <input type="radio" id="F" name="gender">
+    <label for="F">Female</label><br><br>
+    <label>Photo: (Upload your passport size photo here)</label><br><br>
+    <input type="file" name="file" class="file" multiple><br><br>
+    <label>Family Income:</label><span>(In numbers)</span>
+    <input type="text" name="income"><br><br>
+    <label>Select your state:</label>
+    <input list="states">
+    <datalist id="states">
+        <option value="Andra Pradesh"></option>
+        <option value="TamilNadu"></option>
+        <option value="Karnataka"></option>
+    </datalist><br><br>
+    <label>District:</label>
+    <input type="text" name="district"><br><br>
+    <label>Enter Your Address:</label><br>
+    <textarea name="address" class="file" placeholder="Enter Here"></textarea><br><br>
+    <label>PinCode:</label>
+    <input type="text" name="pin"><br><br>
+    <input type="checkbox" id="agree">
+    <label for="agree">I agree that the above given details are truly
+    known to my knowledge</label><br><br>
+    <input type="submit" id="sumbut" onclick="return validate()">
+    <script src="script.js"></script>
+</div>
+</form>
+</body>
+</html>
